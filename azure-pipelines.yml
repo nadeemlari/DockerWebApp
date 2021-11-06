@@ -38,3 +38,14 @@ stages:
         tags: |
           $(tag)
           latest
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker'
+        repository: '$(imageRepository)'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        tags: |
+          $(Build.BuildId)
+          latest
+    
+
