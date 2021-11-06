@@ -14,7 +14,7 @@ variables:
   imageRepository: 'dockerwebapp'
   containerRegistry: 'mnlari.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildNumber)'
+  tag: '$(Build.BuildId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
